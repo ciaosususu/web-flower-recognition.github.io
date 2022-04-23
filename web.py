@@ -32,9 +32,6 @@ right_layout = [[sg.Text("Recognise results:")],
 layout = [[sg.Column(left_layout),
           sg.Column(right_layout, element_justification="center")]]
 
-# Create the window
-window = sg.Window("Flower Recognition", layout, element_justification="center")   
-
 def clear():
     window["Take a photo"].update(disabled=False)
     window["Find"].update(disabled=False)
@@ -42,6 +39,10 @@ def clear():
     window["IMAGE"].update(size=(224,224), filename="background.png")
     window["NAME"].update(" ")
     window["ACC"].update(" ")
+
+def main():
+# Create the window
+window = sg.Window("Flower Recognition", layout, element_justification="center")   
 
 while True:  # Event Loop
     event, values = window.read()
@@ -127,3 +128,6 @@ while True:  # Event Loop
         break
 
 window.close()
+
+
+main()
