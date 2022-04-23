@@ -40,7 +40,6 @@ def clear():
     window["NAME"].update(" ")
     window["ACC"].update(" ")
 
-def main():
 # Create the window
 window = sg.Window("Flower Recognition", layout, element_justification="center")   
 
@@ -129,5 +128,3 @@ while True:  # Event Loop
 
 window.close()
 
-
-main()
